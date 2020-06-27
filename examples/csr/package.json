@@ -1,0 +1,32 @@
+{
+  "name": "csr",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --port 3000",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production --config webpack.config.js"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-css-spinners": "file:../..",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-router-dom": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "html-webpack-plugin": "latest",
+    "sass": "latest",
+    "sass-loader": "latest",
+    "source-map-loader": "latest",
+    "style-loader": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  }
+}

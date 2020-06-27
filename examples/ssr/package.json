@@ -1,0 +1,30 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "rimraf dist",
+    "dev": "webpack --watch --mode development",
+    "prebuild": "rimraf dist",
+    "build": "webpack --mode production --progress",
+    "start": "NODE_ENV=production node dist/main"
+  },
+  "dependencies": {
+    "express": "latest",
+    "react": "latest",
+    "react-css-spinners": "file:../..",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-react": "latest",
+    "babel-loader": "latest",
+    "css-loader": "latest",
+    "mini-css-extract-plugin": "latest",
+    "nodemon-webpack-plugin": "latest",
+    "rimraf": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-node-externals": "latest"
+  }
+}
