@@ -3,20 +3,19 @@ import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
-
-import pkg from './package.json'
+import packageJson from './package.json'
 
 export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.main,
+      file: packageJson.main,
       format: 'cjs',
       exports: 'named',
       sourcemap: true
     },
     {
-      file: pkg.module,
+      file: packageJson.module,
       format: 'es',
       exports: 'named',
       sourcemap: true
