@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "react": "latest",
-    "react-css-spinners": "file:../..",
+    "reactjs-spinners": "file:../..",
     "react-dom": "latest"
   },
   "devDependencies": {

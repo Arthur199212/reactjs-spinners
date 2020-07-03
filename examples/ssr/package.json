@@ -7,12 +7,12 @@
     "dev": "webpack --watch --mode development",
     "prebuild": "rimraf dist",
     "build": "webpack --mode production --progress",
-    "start": "NODE_ENV=production node dist/main"
+    "start": "node dist/main"
   },
   "dependencies": {
     "express": "latest",
     "react": "latest",
-    "react-css-spinners": "file:../..",
+    "reactjs-spinners": "file:../..",
     "react-dom": "latest"
   },
   "devDependencies": {

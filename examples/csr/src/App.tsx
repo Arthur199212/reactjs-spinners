@@ -1,5 +1,5 @@
 import React from 'react'
-import { Ellipsis, Ring, Spinner } from 'react-css-spinners'
+import { Ellipsis, Ring, Spinner } from 'reactjs-spinners'
 
 const App = () => {
   return (
