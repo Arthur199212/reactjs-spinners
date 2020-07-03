@@ -4,7 +4,25 @@
   "description": "Pure css spinners for React",
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "sideEffects": "false",
+  "sideEffects": [
+    "*.css"
+  ],
+  "author": "Arthur Rubchenko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arthur199212/reactjs-spinners.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "spinners",
+    "loaders"
+  ],
+  "homepage": "https://Arthur199212.github.io/reactjs-spinners/",
+  "files": [
+    "build"
+  ],
   "scripts": {
     "build": "rollup -c",
     "start": "ts-node-dev --no-notify --transpile-only src",
@@ -19,30 +37,10 @@
     "test:staged": "jest --findRelatedTests",
     "watch": "rollup -cw",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "storybook:build": "build-storybook -c storybook"
+    "storybook:build": "build-storybook -c storybook",
+    "predeploy": "npm run storybook:build",
+    "deploy": "gh-pages -d storybook-static"
   },
-  "keywords": [],
-  "author": "Arthur Rubchenko",
-  "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "npm run lint:ts",
-      "npm run test:staged",
-      "git add"
-    ],
-    "src/**/*.css": [
-      "npm run lint:css",
-      "git add"
-    ]
-  },
-  "files": [
-    "build"
-  ],
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@storybook/react": "^5.3.19",
@@ -92,5 +90,21 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run lint:ts",
+      "npm run test:staged",
+      "git add"
+    ],
+    "src/**/*.css": [
+      "npm run lint:css",
+      "git add"
+    ]
   }
 }
